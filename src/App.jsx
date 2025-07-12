@@ -1,8 +1,14 @@
 // src/App.jsx
+import React from 'react'
+import AppRoutes from './AppRoutes'
+import { ErrorBoundary } from './components/ErrorBoundary'
 
-import './App.css'
-import { AppRoutes } from './AppRoutes'
-
-export default function App() {
-  return <AppRoutes />
+function App() {
+  return (
+    <ErrorBoundary>
+      <AppRoutes />
+    </ErrorBoundary>
+  )
 }
+
+export default App
